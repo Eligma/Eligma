@@ -4,7 +4,7 @@ Output used as a new feature in Discovery Engine and as a guide for extracting o
 
 Deep convolutional neural network for category classification.
 
-This is early prototype, prof-of-concept and **under development**.
+This is early prototype, proof-of-concept and **under development**.
 
 ### Prerequisites
 
