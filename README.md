@@ -2,7 +2,7 @@
 
 This repo contains parts of machine learning engines for Eligma platform.
 
-*It will not be updated and maintained regularly. Purpose of this repository is to share and opensource parts of Discovery Engine as prof-of-concept.*
+*It will not be updated and maintained regularly. Purpose of this repository is to share and opensource parts of Discovery Engine as proof-of-concept.*
 
 Please check sub projects README.md  
 - [Category feature](DiscoveryEngine/QueryUnderstanding/FeaturePredictors/category/README.md)
