@@ -3,10 +3,7 @@ from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 from tensorflow.contrib import learn
 import tensorflow as tf
-import pandas as pd
-import numpy as np
 import json
-import ast
 import h5py
 
 stopWords = stopwords.words('english')
@@ -27,11 +24,6 @@ def loadTrainingData(filename, labels_filename, vocab_filename):
     labels_dict = json.loads(open(labels_filename).read())
     vocab_processor = learn.preprocessing.VocabularyProcessor.restore(vocab_filename)
     return x, y, labels_dict, vocab_processor
-
-def loadAndPrepareDataForPredict(model_filename, labels_filename, vocab_filename):
-    labels_dict = json.loads(open(labels_filename).read())
-    vocab_processor = learn.preprocessing.VocabularyProcessor.restore(vocab_filename)
-    return model, label_dict, vocab_processor
 
 def train_input_fn(features, labels, batch_size, mode=tf.estimator.ModeKeys.EVAL):
     shuffle = True if mode == tf.estimator.ModeKeys.TRAIN else False

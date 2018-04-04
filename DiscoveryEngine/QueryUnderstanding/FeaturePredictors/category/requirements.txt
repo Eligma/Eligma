@@ -1,0 +1,6 @@
+nltk==3.2.5
+pandas==0.22.0
+tensorflow==1.4.1
+numpy==1.14.0
+h5py==2.7.1
+scikit_learn==0.19.1

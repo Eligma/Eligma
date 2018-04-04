@@ -1,5 +1,4 @@
 import tensorflow as tf
-import numpy as np
 
 def CategoryClassifierModel(features, labels, mode, params):
     
@@ -9,7 +8,7 @@ def CategoryClassifierModel(features, labels, mode, params):
     wordcnnshape = wordcnn.get_shape()
     rlayer = tf.reshape(wordcnn,[-1, wordcnnshape[1] * wordcnnshape[2]])
     dropout = tf.nn.dropout(rlayer, params['dropout'])
-    logits = tf.layers.dense(inputs=rlayer, units=params['n_classes'], activation=None)
+    logits = tf.layers.dense(inputs=dropout, units=params['n_classes'], activation=None)
 
     if mode == tf.estimator.ModeKeys.PREDICT:
         probabilities = tf.nn.softmax(logits)
